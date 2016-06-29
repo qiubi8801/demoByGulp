@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html xmlns:gs="http://www.gensee.com/ec">
+<head>
+	<meta charset="UTF-8">
+	<title>回放间 - 考研帮</title>
+	<link href="http://img.kaoyan.com/css/reset.css" rel="stylesheet" >
+	<link href="http://img.kaoyan.com/css/ui-dialog.css" rel="stylesheet">
+    <link href="http://img.kaoyan.com/css/pc/bangstudy/common.css" rel="stylesheet">
+	<link href="../dist/css/live.css" rel="stylesheet">
+	<script type="text/javascript" src="http://static.gensee.com/webcast/static/sdk/js/gssdk.js"></script>
+</head>
+<body>
+	<div class="vod">
+	    <div class="live_header">
+	        <div class="logo fl"><img src="http://img.kaoyan.com/images/pc/bangstudy/logo_live.png" alt=""></div>
+	        <div class="title fl"><b></b>
+	            <strong>北京大学会计智播课</strong> <span>李老师</span>
+	        </div>
+	        <div class="ucenter" id="J_ucenter">
+	            <div class="beforeU">
+	                <a href="#" class="joinLoginBtn">登录</a>
+	                <span>|</span>
+	                <a href="http://bbs.kaoyan.com/member.php?mod=register" target="_blank">注册</a>
+	            </div>
+	        </div>
+	    </div>
+	    <div class="live_body clearfix">
+	        <div class="main" id="J_main">
+                <!--点播组件 start-->
+	            <div class="live_widget">
+	                <div class="doc_widget main_view" id="J_doc_widget">
+                        <a href="javascript:;" class="btn_cancel_fullscreen"  title="取消全屏"></a>
+	                    <!-- Doc start -->
+                        <gs:doc id="docComponent" ctx="training" site="kaoyan.gensee.com" ownerid="LCBDfrCShi" authcode="134502"/>
+                        <!-- Doc end -->
+	                </div>
+                    <!--  课件名称：test  编号：42782573-->
+                    <!-- video start -->
+                    <div class="video_widget" id="J_video_widget">
+                        <a href="javascript:;" class="btn_cancel_fullscreen"  title="取消全屏"></a>
+                        <gs:video-vod id="videoComponent" site="kaoyan.gensee.com" bar="false" ctx="training" ownerid="LCBDfrCShi" py='1' loop='false' lang="zh_CN" authcode="134502"/>
+                    </div>
+                    <!-- video end -->
+	            </div>
+                <!--点播组件 end-->
+
+                <!-- 进度条 start -->
+                <div class="process_bar" id="J_process_bar">
+                    <a href="javascript:;" class="btn_control btn_pause"></a>
+                    <div class="timer_widget">
+                        <span id="J_cur_time">00:00:00</span> / <span id="J_total_duration">--:--:--</span>
+                    </div>
+                    <div class="process_widget">
+                        <div class="inner">
+                            <em class="loaded_porcess"></em>
+                            <span class="process_btn"></span>
+                        </div>
+                    </div>
+                </div>
+                <!-- 进度条 end -->
+	            <!--工具条 start-->
+	            <div class="tool_bar">
+                    <div class="vol_widget">
+                        <a href="javascript:;" class="btn_voice vol_up" title="声音调节">声音调节</a> <!-- vol_down / vol_up / vol_mute -->
+                        <div class="slider_ctrl" id="J_vol_ctrl"></div>
+                    </div>
+                    <a href="javascript:;" class="videoCtrl" id="J_videoCtrl" title="隐藏视频">视频显隐</a>
+                    <a href="javascript:;" class="switch" id="J_switch" title="切换到视频">视频/文档切换</a>
+                    <a href="javascript:;" class="btn_fullscreen" id="J_btn_fullscreen" title="全屏">全屏</a>
+	            </div>
+	            <!--工具条 end-->
+	        </div>
+	        <div class="sidebar" id="J_sidebar">
+	            <div class="tab" id="J_tab">
+	                <div class="tab_hd">
+	                    <ul>
+	                        <li >公共课聊天</li>
+	                        <li class="on" data-value="chapterlist">章节目录</li>
+	                    </ul>
+	                </div>
+	                <div class="tab_bd" id="J_tab_bd">
+	                    <div class="tab_con">
+	                        <div class="public_chat_list" id="J_public_chat_list">
+	                            <ul>
+	                            </ul>
+	                        </div>
+                            <!-- 按钮 start-->
+                            <div class="btn_area clearfix">
+                                <a href="javascript:;" class="btn_zixun">咨询老师</a>
+                                <a href="#" class="btn_more">更多课程</a>
+                            </div>
+                            <!-- 按钮 end-->
+	                        <div class="public_chat_input chat_sender">
+	                            <div class="pulic_chat_edit chat_content" id="J_pulic_chat_edit" contenteditable="true">
+	                                重播不能参与聊天哦...
+	                            </div>
+	                            <div class="ft">
+                                    <a href="javascript:;" class="btn btn_send" id="J_btn_send">发送</a>
+                                    <div class="emotion_widget fr">
+	                                    <a href="#" class="btn_emotion" id="J_btn_emotion"></a>
+	                                </div>
+	                            </div>
+	                        </div>
+	                    </div>
+	                    <div class="tab_con"  style="display:block">
+	                        <div class="chapter_list" id="J_chapter_list">
+	                            <ul>
+
+                                </ul>
+	                        </div>
+	                    </div>
+	                </div>
+	            </div>
+	        </div>
+	        <!--直播遮罩 start-->
+            <div class="unStart">
+                <div class="bang_logo"></div>
+            </div>
+            <!--直播遮罩 end-->
+	    </div>
+
+	</div>
+    <div style="display:none">
+        <input type="hidden" name="" value="1" id="J_is_teacher" /> <!-- 是否是老师 1/2/0 -->
+        <input type="hidden" name="" value="todo" id="J_uname"> <!-- 当前用户名 -->
+        <input type="hidden" id="J_type" value="public" />
+    </div>
+	<!--script start-->
+    <script src="http://img.kaoyan.com/js/jquery/jquery-1.9.0.min.js"></script>
+    <script src="http://img.kaoyan.com/js/app/pc/bangstudy/common.js"></script>
+    <script src="http://img.kaoyan.com/js/jquery/plugins/jq.range.js"></script>
+    <script src="http://img.kaoyan.com/js/other_libs/artdialog-plus.js"></script>
+    <script src="http://img.kaoyan.com/js/app/pc/bangstudy/vod.js"></script>
+    <script language="javascript" type="text/javascript">
+    var NTKF_PARAM = {
+        "siteid":"kf_9172", /*网站siteid*/
+    }
+    </script>
+    <script type="text/javascript" src="http://dl.ntalker.com/js/xn6/ntkfstat.js?siteid=kf_9172" charset="utf-8"></script>
+    <!--script end-->
+</body>
+</html>

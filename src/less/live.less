@@ -1,0 +1,293 @@
+@charset "utf-8";
+@import 'http://img.kybimg.com/css/less/css3.less';
+
+html{background:#232323;}
+body{overflow-y:hidden}
+
+.btn {display: inline-block;border: none;width: 106px;height: 36px;line-height: 36px;color: #FFF;font-size: 14px;text-align: center;
+    .linear-gradient(#74dad6, #65c9c5);
+    .border-radius(3px);
+}
+.btn:hover {color: #FFF;
+    .linear-gradient(#1dccc8, #13b5b1);
+}
+
+.live_header{height:46px; background:#353E4F; padding:0 20px;
+    .logo{padding-top:11px;}
+    .title{float:left; padding-left:24px; margin-left:20px; position:relative;
+        b{position:absolute; width:2px; height:24px; overflow:hidden; background:#8A98B3; left:0; top:11px}
+        strong{font-size:19px; line-height:46px; color:#FFF; vertical-align:-1px;}
+        span{font-size:15px; font-weight:bold; color:#BBB;padding-left:2px;}
+    }
+    .beforeU{display:none}
+}
+.live_body{margin-top:10px; position:relative; padding:0 10px;
+    .sidebar{width:300px; position:absolute; right:10px; top:0; height:500px; }
+    .main{margin-right:310px; height:500px; background:#666; position:relative;}
+    .unStart{ width:100%; height:100%; position:absolute; left:0; top:0; z-index: 100; background:#666; display:none;
+       .bang_logo{ width:282px; height:74px; position:absolute; left:50%; top:50%; margin-left:-141px; margin-top:-37px; background:url('http://img.kaoyan.com/images/pc/bangstudy/logo_bang.png') no-repeat;}
+    }
+}
+
+.live_widget{position:relative; height:100%;
+    .doc_widget{position:absolute; right:0; top:0; width:100%; z-index:1;
+        .btn_cancel_fullscreen{display:none}
+        &.fullscreen{position:absolute; left:-10px; top:-56px; width:100%; height:100%; z-index: 9998;
+            .btn_cancel_fullscreen{display:block; position:absolute; right: 20px; top:20px; z-index:9999; width:24px; height:24px; text-indent:-999em; overflow:hidden; background:url('http://img.kaoyan.com/images/pc/bangstudy/icon_live.png') no-repeat 0 -220px;}
+        }
+    }
+    .video_widget{position:absolute; right:0; top:0; width:150px; height:113px; z-index:2;
+        &.hide{
+            filter:alpha(opacity=0);
+            opacity: 0;
+        }
+        .btn_cancel_fullscreen{display:none}
+        &.fullscreen{position:absolute; left:-10px; top:-56px; width:100%; height:100%; z-index: 9998;
+            .btn_cancel_fullscreen{display:block; position:absolute; right: 20px; top:20px; z-index:9999; width:24px; height:24px; text-indent:-999em; overflow:hidden; background:url('http://img.kaoyan.com/images/pc/bangstudy/icon_live.png') no-repeat 0 -220px;}
+        }
+    }
+}
+
+.tool_bar{height:46px; background:#4C4C4C; width:100%; position:absolute; left:0; bottom:0;
+    .slider_ctrl{position:absolute; left:8px; top:-100px; z-index:5; width:8px; height:100px; background:#393939; display:none;
+        .state_bar{position:absolute; left:0; bottom:0; width:8px; height:60px; background:#F19149}
+        .ctrl_btn{position:absolute; left:-2px; bottom:0; width:12px; height:12px; background:url('http://img.kaoyan.com/images/pc/bangstudy/icon_live.png') no-repeat right -160px; cursor:pointer;}
+    }
+
+    .mic_widget{float:left; margin-top:8px; margin-right:6px; margin-left:15px;  position:relative;
+        .icon_mic{display:block; width:41px; height:30px; background:url('http://img.kaoyan.com/images/pc/bangstudy/icon_live.png') no-repeat; text-indent:-999em; overflow:hidden;
+            &.on{background-position:0 -40px;}
+        }
+        .slider_ctrl{left:6px; top:-108px;}
+    }
+
+    .btn{ width:78px; height:30px; line-height:30px; margin-top:8px; display:none;
+        &.disabled,
+        &.pending{background:#AAA; color:#FFF;}
+        &.btn_ask{display:inline-block;}
+    }
+
+    .vol_widget{position:absolute; left:11px; top:0; width:50px; height:33px;}
+    .btn_voice{display:block; width:30px; height:20px; text-indent:-999em; overflow:hidden; margin-top:13px; margin-right:20px; background:url('http://img.kaoyan.com/images/pc/bangstudy/icon_live.png') no-repeat;
+        &.vol_down{background-position:0 -70px}
+        &.vol_up{background-position:0 -100px}
+        &.vol_mute{background-position:0 -130px}
+    }
+
+    .btn_fullscreen{position:absolute; right:11px; top:11px; width:24px; height:24px; text-indent:-999em; overflow:hidden; background:url('http://img.kaoyan.com/images/pc/bangstudy/icon_live.png') no-repeat 0 -190px;
+    }
+
+    .switch{ position:absolute; right:55px; top:13px; width:22px; height:21px; text-indent:-999em; overflow:hidden; background:url('http://img.kaoyan.com/images/pc/bangstudy/icon_live.png') no-repeat 0 -420px;
+        &:hover{background-position:0 -445px;}
+    }
+    .videoCtrl{ position:absolute; right:98px; top:8px; width:28px; height:30px; text-indent:-999em; overflow:hidden; background:url('http://img.kaoyan.com/images/pc/bangstudy/icon_live.png') no-repeat 0 -360px;
+        &:hover{background-position:0 -390px;}
+
+        &.on{background-position:0 -300px;
+            &:hover{background-position:0 -330px;}
+        }
+    }
+}
+
+.tab{background:#F5F5F5;
+    .tab_hd{height:42px;
+        li{height:38px; line-height:38px; border-top:4px solid #FFF; background:#FFF; float:left; width:50%; text-align:center; font-size:14px; color:#666; cursor:pointer;
+            &.on{background:#F5F5F5; border-top-color:#F19149; color:#333}
+        }
+    }
+    .tab_con{position:relative; height:100%; display:none;}
+
+    .btn_area{padding:0 7px; width:286px; position:absolute; left:0; bottom:160px; font-size:14px;
+        a{width:138px; height:40px; line-height:40px; text-align:center; .border-radius(3px); background:#00B6FF; color:#FFF;
+            &.btn_zixun{float:left}
+            &.btn_more{float:right; background:#69CECA}
+            &:hover{
+                filter:alpha(opacity=80);
+                opacity: .8;
+            }
+        }
+    }
+}
+
+.public_chat_list{height:100%; overflow-y:auto; padding:0 7px;
+    li{font-size:14px; line-height:30px; color:#555;
+        span{color:#72bbde}
+        &.self{
+            span{color:#35A908}
+        }
+        &.admin{
+            span{color:#fc8c41}
+        }
+    }
+}
+
+// .video_widget{width:300px; height:140px; margin-bottom: 10px; position:relative;
+//     .btn{position:absolute; left:0; bottom:0; width:100%; .border-radius(0);
+//         &.disabled,
+//         &.pending{background:#AAA; color:#FFF;}
+//     }
+// }
+
+.user_list{height:100%; overflow-y:auto; padding:0 7px;
+    ul{}
+    li{height:40px; border-bottom:1px dashed #CCC; color:#70B466;
+        span{float:left; height:18px; line-height:18px; background:#70B466; color:#FFF; margin-top:11px; padding:0 5px; margin-right:8px; position:relative;
+            i{position:absolute; right:-6px; top:6px; width:0; height:0; overflow:hidden; border:3px solid transparent; border-left-color:#70B466}
+        }
+        strong{font-weight:normal; line-height:40px; font-size:14px;}
+        .btn_chat_to{float:right; margin-right:30px; font-size:20px; margin-top:13px; color:#AAA; position:relative;
+            width:20px; height:16px; background:url('http://img.kaoyan.com/images/pc/bangstudy/icon_live.png') no-repeat 0 -280px;
+            b.new_msg_num{display:none; position:absolute; right:-7px; top:-6px; z-index:1; padding:0 3px; font-weight:normal; height:12px; line-height:12px; font-size:10px; color:#FFF; background:#ED1C24; .border-radius(2px);}
+            &:hover{color:#f60;}
+        }
+
+        &.teacher{color:#FC8C41;
+            span{ background:#FC8C41;
+                i{border-left-color:#FC8C41;}
+            }
+        }
+        &.classmate{color:#72BBDE;
+            span{ background:#72BBDE;
+                i{border-left-color:#72BBDE;}
+            }
+        }
+    }
+}
+
+
+.public_chat_input{ height:150px; position:absolute; width:100%; left:0; bottom:0; background:#FFF;
+    .pulic_chat_edit{font-size:14px; border:none; line-height:26px; color:#999; height:78px; padding:15px 10px; width:280px; overflow:hidden;
+        &:focus{outline:none;}
+    }
+    .ft{height:30px;padding:6px; text-align:right;}
+    .btn{float:right; width:72px; height:30px; line-height:30px; margin-left:15px;}
+}
+
+.emotion_widget{ width:28px; height:28px; text-align:center; position:relative;
+    .btn_emotion{font-size:30px; color:#BBB; display:block; width:28px; height:28px;
+        background:url('http://img.kaoyan.com/images/pc/bangstudy/icon_live.png') no-repeat 0 -252px;
+        &:hover{color:#999;}
+    }
+
+    .emotion_list{position:absolute; top:-200px; left:-70px; border:1px solid #DDD; background:#FFF;
+        ul{padding:3px; width:180px;}
+        li{float:left; width:24px; height:24px; padding:2px; border:1px solid #FFF;
+            img{width:24px; height:24px; display:block;}
+            &:hover{border-color:#CFCFCF;}
+        }
+    }
+}
+
+.ui-dialog-body{padding:0}
+.ui-dialog .ui-dialog-content{padding:0}
+.ui-dialog .ui-dialog-title{padding:13px; width:auto}
+.ui-dialog-close{top:21px; font-size:14px;}
+.ui-dialog .emotion_list{left:-14px; top:-196px}
+
+
+.private_chat{display:none; background:#FFF; width:665px; height:540px;
+    .chat_list{height:435px; padding:25px 25px 0; overflow-y:auto;
+        li{margin-bottom:15px; position:relative;
+            .avatar{float:left; width:36px; height:36px; .border-radius(36px); margin-right:8px;}
+            .textcon{float:left; border:1px solid #E1E1E1; background:#F6F6F6; margin-right:100px; font-size:14px; padding:5px 10px; .border-radius(4px);
+                b{position:absolute; left:-4px; top:12px; z-index:1; width:5px; height:9px; overflow:hidden; background:url('http://img.kaoyan.com/images/pc/bangstudy/icon_live.png') no-repeat right -190px; }
+                p{line-height:24px;}
+                div{display:inline}
+            }
+            &.self{
+                .avatar{float:right; margin-right:0; margin-left:8px;}
+                .textcon{float:right; background:#96EBE7; border-color:#86D5D2; margin-right:0; margin-left:100px;
+                    b{width:6px; height:9px; left:auto; right:-5px; top:12px; background:url('http://img.kaoyan.com/images/pc/bangstudy/icon_live.png') no-repeat right -220px;}
+                    div{display:inline}
+                }
+            }
+        }
+    }
+    .chat_sender{height:40px; border-top:1px solid #DDD; padding:20px 25px;
+        .emotion_widget{height:40px; width:34px; margin-right:14px;
+            .btn_emotion{margin-top:6px;}
+        }
+        .ipt{float:left; height:38px; line-height:38px; overflow:hidden; width:450px; padding:0 5px; font-size:14px; border:1px solid #DDD; .border-radius(3px);
+            img{vertical-align:middle;}
+            &:focus{outline:none}
+        }
+        .btn{float:right; height:40px; line-height:40px; width:90px;}
+    }
+}
+
+.rollcall{width:416px; height:240px; display:none; font-family: Microsoft YaHei; text-align:center; background:#FFF;
+    p{ height:24px; line-height:24px; font-size:16px; color:#666; padding-top:34px;}
+    .timer{margin-top:26px; height:60px;
+        strong{font-size:40px; color:#F60; font-weight:normal;}
+        span{color:#666}
+    }
+    .btn{margin-top:20px;}
+}
+
+//回放
+.vod{
+    .chapter_list{overflow-y:auto; padding:0 7px;
+        li{margin-bottom:5px;}
+        a{display:block; padding:0 7px; color:#999; height:24px; line-height:24px; overflow:hidden; 
+            span{color:#333; padding-left:10px;}
+            &:hover,
+            &.curChapter{background:#F19149; color:#FFF;
+                span{color:#FFF;}
+            }
+        }
+    }
+}
+
+.enterDialog{position:absolute; left:0; top:0; z-index:10000; width:100%; height:100%;
+    .dialog_bg{width:100%; height:100%; background:#000; opacity:.6; filter:alpha(opacity=60);}
+    .dialon_con{background:#FFF; width:400px; height:220px; position:absolute; left:50%; top:50%; margin-left:-200px; margin-top:-110px; z-index:1; .border-radius(10px);
+        .dialog_close{position:absolute; right:20px; top:20px; width:26px; height:26px; line-height:26px; text-align:center; font-size:40px; color:#E3E3E3; font-weight:100;}
+        .dialog_bd{padding:70px 40px 0;}
+        .ipt{display:block; margin-bottom:20px; height:40px; font-size:20px; width:100%; border:none; line-height:40px; border-bottom:1px solid #D0D0D0; }
+        .btn_enter{display:block; cursor:pointer; height:46px; width:100%; border:none; line-height:46px;text-align:center; background:#289FF3; color:#FFF;font-size:20px; .border-radius(5px);
+            .box-shadow(2px 2px 2px #ccc);
+            &:active{.translate(1px, 1px); .box-shadow(none);}
+        }
+        .error{position:absolute; right:56px; top:70px; z-index:2; height:44px; line-height:44px; color:#fd1616; font-size:16px; }
+    }
+}
+
+//回放进度条
+.process_bar{ height:40px; background:#000; width:100%; position:absolute; left:0; bottom:46px; z-index:10;
+    .btn_control{ float:left; width:40px; height:40px; background:url('http://img.kaoyan.com/images/pc/bangstudy/icon_live.png') no-repeat;
+        &.btn_play{background-position:11px -470px}
+        &.btn_pause{background-position:12px -510px}
+    }
+    .process_widget{height:22px; margin:0 150px 0 50px; padding-top:18px; cursor:pointer;
+        .inner{height:4px;  background:#7D7D7D; position:relative;}
+        .loaded_porcess{float:left; width:0; height:4px; background:#F05F02}
+        .process_btn{cursor:pointer; position:absolute; left:-7px; top:-5px; z-index:10; width:14px; height:14px; overflow:hidden; background:url('http://img.kaoyan.com/images/pc/bangstudy/icon_live.png') no-repeat left -550px;}
+    }
+    .timer_widget{float:right; line-height:40px; color:#FFF; padding-right:20px;}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

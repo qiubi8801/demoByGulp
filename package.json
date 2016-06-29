@@ -1,0 +1,31 @@
+{
+  "name ": "myweb ",
+  "version": "0.0.0",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.13.0",
+    "css-select": "^1.2.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-clean-css": "^2.0.10",
+    "gulp-concat": "^2.6.0",
+    "gulp-connect": "^4.1.0",
+    "gulp-csscomb": "^3.0.7",
+    "gulp-csslint": "^0.3.1",
+    "gulp-csso": "^2.0.0",
+    "gulp-eslint": "^2.0.0",
+    "gulp-img64": "0.0.6",
+    "gulp-jshint": "^2.0.1",
+    "gulp-less": "^3.1.0",
+    "gulp-live-server": "0.0.30",
+    "gulp-pipes": "^0.1.6",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^7.1.0",
+    "gulp-sourcemaps": "^1.6.0",
+    "gulp-uglify": "^1.5.3",
+    "gulp-watch": "^4.3.8",
+    "gulp-webpack": "^1.5.0",
+    "jshint": "^2.9.2",
+    "webpack-stream": "^3.2.0"
+  }
+}
