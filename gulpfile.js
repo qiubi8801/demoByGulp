@@ -49,4 +49,4 @@ gulp.task('serve', ['less'], function() {
 });
 
 // 默认任务
-gulp.task('default',['less','jsLint','js','serve']);
+gulp.task('default',['less','jsLint','js']);
